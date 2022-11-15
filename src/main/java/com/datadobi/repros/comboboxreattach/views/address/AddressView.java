@@ -10,9 +10,13 @@ import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.vaadin.flow.spring.annotation.UIScope;
 
 @PageTitle("Address")
 @Route(value = "address", layout = MainLayout.class)
+@UIScope
+@SpringComponent
 public class AddressView extends Div {
 
     private ComboBox<String> state = new ComboBox<>("State");

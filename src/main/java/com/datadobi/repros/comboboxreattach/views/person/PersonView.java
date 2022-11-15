@@ -16,11 +16,15 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
+import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.vaadin.flow.spring.annotation.UIScope;
 
 @PageTitle("Person")
 @Route(value = "person", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
 @Uses(Icon.class)
+@UIScope
+@SpringComponent
 public class PersonView extends Div {
 
     private PhoneNumberField phone = new PhoneNumberField("Phone number");
